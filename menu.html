@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan App Layout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow: auto; /* Prevent scrolling */
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-around;
+            background-color: #e0f7fa;
+            padding: 10px 0;
+            width: 100%;
+        }
+
+        .header-button {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+
+        .main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .max-amount {
+            background-color: #e0f7fa;
+            border-radius: 10px;
+            text-align: center;
+            padding: 20px;
+            width: 300px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .amount {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .withdraw-button {
+            background-color: #ffeb3b;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            margin-top: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .loan-options {
+            margin-top: 20px;
+            padding: 0 20px;
+            width: 100%;
+            overflow-y: auto;
+        }
+
+        .loan-option {
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        }
+
+        .loan-option img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        .loan-option button {
+            background-color: #ffeb3b;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 10px;
+            margin-left: auto;
+            cursor: pointer;
+        }
+
+        .bottom-nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #4caf50;
+            padding: 10px 0;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            border-radius: 20px;
+            
+        }
+
+        .bottom-nav a {
+            text-align: center;
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            margin-top :30px;
+        }
+
+        .bottom-nav img {
+            width: 30px;
+            height: 30px;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <button class="header-button">Persetujuan</button>
+        <button class="header-button">Verifikasi Data</button>
+    </div>
+    <div class="main">
+        <div class="max-amount">
+            <div>Jumlah maksimum</div>
+            <div class="amount">Rp. 20.000.000</div>
+            <div>Tenor 55 hari</div>
+            <div>Bunga 10/hari</div>
+            <button class="withdraw-button">Menarik Uang</button>
+        </div>
+    </div>
+    <div class="loan-options">
+        <div class="loan-option">
+            <img src="emas.jpg" alt="Pinjam Emas">
+            <div>Jumlah Pembayaran:</div>
+            <div>Rp 2.100.000</div>
+            <button>Ajukan Sekarang</button>
+        </div>
+        <div class="loan-option">
+            <img src="paynowpro.jpg" alt="Paynow Pro">
+            <div>Jumlah Pembayaran:</div>
+            <div>Rp 2.100.000</div>
+            <button>Ajukan Sekarang</button>
+        </div>
+                <div class="loan-option">
+            <img src="danaflow.jpg" alt="Dana Flow">
+            <div>Jumlah Pembayaran:</div>
+            <div>Rp 2.100.000</div>
+            <button>Ajukan Sekarang</button>
+        </div>
+        
+                <div class="loan-option">
+            <img src="mudahdi.jpg" alt="Mudah Dipinjam">
+            <div>Jumlah Pembayaran:</div>
+            <div>Rp 2.100.000</div>
+            <button>Ajukan Sekarang</button>
+        </div>
+
+    </div>
+    <div class="bottom-nav">
+        <a href="pinjaman.html">
+            <img src="iconbawahkanan.png" alt="Pinjaman">
+            Pinjaman
+        </a>
+        <a href="saya.html">
+            <img src="iconbawahkiri.png" alt="Saya">
+            Saya
+        </a>
+    </div>
+</body>
+<script>
+        // Prevent scrolling with keyboard
+        window.addEventListener('keydown', function(e) {
+            if (["ArrowUp", "ArrowDown", "Space", "PageUp", "PageDown", "Home", "End"].indexOf(e.code) > -1) {
+                e.preventDefault();
+            }
+        }, { passive: false });
+
+        // Prevent scrolling with mouse wheel
+        window.addEventListener('wheel', function(e) {
+            e.preventDefault();
+        }, { passive: false });
+
+        // Prevent touch scrolling on mobile devices
+        window.addEventListener('touchmove', function(e) {
+            e.preventDefault();
+        }, { passive: false });
+    </script>
+
+</html>
