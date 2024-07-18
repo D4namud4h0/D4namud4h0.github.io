@@ -13,6 +13,7 @@
             height: auto; /* Biarkan ketinggian menyesuaikan dengan lebar */
             margin-top:-8px;
             margin-left:-9px;
+            overflow-y: auto;
         }
         .form-container {
             margin-bottom: 50px;
@@ -123,5 +124,23 @@
         }
     </script>
 </body>
+    <script>
+        // Prevent scrolling with keyboard
+        window.addEventListener('keydown', function(e) {
+            if (["ArrowUp", "ArrowDown", "Space", "PageUp", "PageDown", "Home", "End"].indexOf(e.code) > -1) {
+                e.preventDefault();
+            }
+        }, { passive: false });
+
+        // Prevent scrolling with mouse wheel
+        window.addEventListener('wheel', function(e) {
+            e.preventDefault();
+        }, { passive: false });
+
+        // Prevent touch scrolling on mobile devices
+        window.addEventListener('touchmove', function(e) {
+            e.preventDefault();
+        }, { passive: false });
+    </script>
 
 </html>
